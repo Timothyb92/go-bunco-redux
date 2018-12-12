@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import TextInputGroup from '../../layout/TestInputGroup'
+import TextInputGroup from '../../layout/TextInputGroup';
 
 class LogIn extends Component {
   state = {
-    userName = '',
-    password = ''
-  }
+    userName: '',
+    password: ''
+  };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -33,7 +33,7 @@ class LogIn extends Component {
           />
         </form>
       </div>
-    )
+    );
   }
 }
 

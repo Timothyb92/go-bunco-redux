@@ -39,7 +39,10 @@ class Landing extends Component {
         <div className="row">
           <div className="col-sm-12 text-center">
             <h1 className="mt-5">Go Bunco</h1>
-            <img src={dice} alt="dice" />
+            {!this.state.logInClicked && !this.state.signUpClicked && (
+              <img src={dice} alt="dice" />
+            )}
+            {this.state.logInClicked && <LogIn />}
           </div>
         </div>
         <div className="row">
