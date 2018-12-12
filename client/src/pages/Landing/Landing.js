@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import LogIn from '../../components/LogIn';
+import dice from './images/dice.png';
 import './Landing.css';
 
 class Landing extends Component {
@@ -37,6 +39,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col-sm-12 text-center">
             <h1 className="mt-5">Go Bunco</h1>
+            <img src={dice} alt="dice" />
           </div>
         </div>
         <div className="row">
