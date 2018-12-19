@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import LogIn from '../../components/LogIn';
+import SignUp from '../../components/SignUp';
 import dice from './images/dice.png';
 import './Landing.css';
 
@@ -43,6 +44,7 @@ class Landing extends Component {
               <img src={dice} alt="dice" />
             )}
             {this.state.logInClicked && <LogIn />}
+            {this.state.signUpClicked && <SignUp />}
           </div>
         </div>
         <div className="row">
