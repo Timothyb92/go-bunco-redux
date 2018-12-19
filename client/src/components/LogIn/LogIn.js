@@ -28,8 +28,9 @@ class LogIn extends Component {
             label="Password"
             name="password"
             placeholder="Password"
-            value={userName}
+            value={password}
             onChange={this.onChange}
+            type="password"
           />
         </form>
       </div>
