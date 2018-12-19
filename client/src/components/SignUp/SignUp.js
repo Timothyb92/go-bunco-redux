@@ -26,8 +26,7 @@ class SignUp extends Component {
       userName,
       password
     };
-    console.log('onSubmit running in SignUp.js');
-    console.log(newUser);
+    this.createUser(newUser);
   };
 
   render() {
