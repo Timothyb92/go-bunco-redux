@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
 import TextInputGroup from '../../layout/TextInputGroup';
+import API from '../../utils/API';
 
 class SignUp extends Component {
   state = {
     userName: '',
-    password: ''
+    password: '',
+    id: ''
+  };
+
+  createUser = data => {
+    API.createUser(data).then(results => {
+      this.setState({
+        id: results.data._id
+      });
+    });
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  onSubmit = e => {
+    const { userName, password } = this.state;
+    e.preventDefault();
+    const newUser = {
+      userName,
+      password
+    };
+    console.log('onSubmit running in SignUp.js');
+    console.log(newUser);
+  };
 
   render() {
     const { userName, password } = this.state;
@@ -31,6 +52,9 @@ class SignUp extends Component {
             onChange={this.onChange}
             type="password"
           />
+          <button type="submit" className="btn w-100" onClick={this.onSubmit}>
+            Submit
+          </button>
         </form>
       </div>
     );
