@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Landing from './pages/Landing';
+import Welcome from './pages/Welcome';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route exact path="/welcome" component={Welcome} />
         </Switch>
       </Router>
     );

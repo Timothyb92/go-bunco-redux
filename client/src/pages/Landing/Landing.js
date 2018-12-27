@@ -61,6 +61,13 @@ class Landing extends Component {
             </button>
           </div>
         </div>
+        <div className="row">
+          <div className="col-sm-12 text-center p-0">
+            <Link to={`welcome`}>
+              <p>Test Link</p>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

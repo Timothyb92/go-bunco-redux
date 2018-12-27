@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import TextInputGroup from '../../layout/TextInputGroup';
 import API from '../../utils/API';
 
@@ -51,9 +52,11 @@ class SignUp extends Component {
             onChange={this.onChange}
             type="password"
           />
-          <button type="submit" className="btn w-100" onClick={this.onSubmit}>
-            Submit
-          </button>
+          <Link to={`welcome`}>
+            <button type="submit" className="btn w-100" onClick={this.onSubmit}>
+              Submit
+            </button>
+          </Link>
         </form>
       </div>
     );
