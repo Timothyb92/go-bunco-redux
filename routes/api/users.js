@@ -8,6 +8,6 @@ router
 
 // router.route('/api/users/:userName').get(userController.findById);
 
-// router.route('/api/users/verify/:userName').post(userController.verifyUser);
+router.route('/api/users/verify/:userName').post(userController.verifyUser);
 
 module.exports = router;
